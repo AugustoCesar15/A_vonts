@@ -33,12 +33,25 @@
     }
     .container{
         width: 80%;
-        height: 576px;
+        height: 150px;
         margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
+        /* background-image: linear-gradient(to right, rgb(132, 8, 204), rgb(0, 194, 168)); */
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .form{
+        width: 50%;
+        height: 300px;
+        margin: 0 auto;
+        text-align: center;
         background-image: linear-gradient(to right, rgb(132, 8, 204), rgb(0, 194, 168));
+    }
+    .form h3{
+        font-size: 30px;
+        font-family: 'Ubuntu';
+        font-weight: 300;
     }
     .container h3{
         font-size: 30px;
@@ -55,6 +68,12 @@
     </div>
     <div class="container">
         <h3>Fazendo os primeiros comandos do Git GitHub</h3>
+    </div>
+    <div class="form">
+        <h3>Ele falou mt de pizza, então...</h3>
+        <p>Qual sua pizza favorita? </p><input type="text" id="in_fav">
+        <p>Qual sua pizzaria favorita? </p><input type="text" id="in_pizFav">
+        <button id="botao">Clique para registrar</button>
     </div>
 </body>
 
