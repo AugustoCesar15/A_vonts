@@ -63,12 +63,31 @@
     </div>
 
     <div class="espaco">
+        <div class="borda" id="borda-um">
+            <h2>Eu sou</h2>
+        </div>
+        <div class="borda testr" id="borda-dois">
+            <h2>Lindo</h2>
+        </div>
+        <img src="./img/x6.png" alt="">
+    </div>
+    <button onclick="teste()">A</button>
+    <div class="espaco1">
+        <div class="borda1">
+        </div>
+        <img src="./img/x6.png" class="carro">
     </div>
     <div class="debaixo">
-        <h2>Lorem Ipsuin</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui similique, tenetur assumenda quo hic accusamus eligendi modi nemo rem distinctio. Quaerat architecto nam odit, voluptate quae cupiditate asperiores impedit eligendi! <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id minima, dolorem cumque in aliquam culpa amet non quas ducimus et libero, vitae doloremque beatae placeat. Dolor eius quia doloribus nisi! <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis animi ab hic eaque, quos quam nisi ex deleniti? Velit ut nulla molestiae ipsa, temporibus ab excepturi? Adipisci harum vitae error.</p>
+        <h2>Lorem Ipsuian</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui similique, tenetur assumenda quo hic accusamus
+            eligendi modi nemo rem distinctio. Quaerat architecto nam odit, voluptate quae cupiditate asperiores impedit
+            eligendi! <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id minima, dolorem cumque in aliquam
+            culpa amet non quas ducimus et libero, vitae doloremque beatae placeat. Dolor eius quia doloribus nisi!
+            <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis animi ab hic eaque, quos quam nisi ex
+            deleniti? Velit ut nulla molestiae ipsa, temporibus ab excepturi? Adipisci harum vitae error.
+        </p>
     </div>
-<a href="#topo" style="text-decoration: none; color: white; margin-bottom: 100px;">Subir</a>
+    <a href="#topo" style="text-decoration: none; color: white; margin-bottom: 100px;">Subir</a>
 
 </body>
 
@@ -90,4 +109,47 @@
 
         }
     }
+</script>
+
+<script>
+    var numTeste = 1
+    var borda1 = document.getElementById('borda-um')
+    var borda2 = document.getElementById('borda-dois')
+    setInterval(function teste() {
+
+        if (numTeste == 1) {
+            borda1.style.width = "0"
+            borda1.style.height = "0"
+            borda1.style.position = "absolute"
+            borda1.style.zIndex = "-1"
+            borda1.style.visibility = "hidden"
+            borda1.style.display = "none"
+            borda2.style.display = "flex"
+            borda2.style.visibility = "visible"
+            borda2.style.zIndex = "1"
+            borda2.style.width = "80%"
+            borda2.style.height = "36vmax"
+
+
+            numTeste++
+
+        } else {
+            borda2.style.width = "0"
+            borda2.style.height = "0"
+            borda2.style.position = "absolute"
+            borda2.style.zIndex = "-1"
+            borda2.style.visibility = "hidden"
+            borda2.style.display = "none"
+            borda1.style.display = "flex"
+            borda1.style.visibility = "visible"
+            borda1.style.zIndex = "1"
+            borda1.style.width = "80%"
+            borda1.style.height = "36vmax"
+            borda1.style.position = "absolute"
+            borda1.style.zIndex = "-1"
+            numTeste = 1
+        }
+
+
+    }, 2000);
 </script>

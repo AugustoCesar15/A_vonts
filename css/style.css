@@ -171,6 +171,7 @@ nav .temazin button span {
 
 .nav1 .escondido {
     position: absolute;
+    z-index: 10000;
     top: 0;
     right: -31%;
     width: 30%;
@@ -180,7 +181,7 @@ nav .temazin button span {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
     box-shadow: -1px 0px 10px black;
 }
 
@@ -218,45 +219,87 @@ nav .temazin button span {
 }
 
 
-@media only screen and (max-width: 1100px) {
-    nav {
-        display: none;
-    }
 
-    .nav1 {
-        display: flex;
-    }
-}
-
-.espaco{
+.espaco,
+.espaco1 {
     width: 100%;
-    height: 100vh;
-    background-color: #9900aa;
+    height: 43vmax;
+    background-color: var(--clr);
     position: relative;
     padding: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 3;
+    visibility: visible;
 }
 
-.espaco::before{
-    content: '';
+.espaco1 {
+    display: none;
+}
+
+.espaco .borda,
+.espaco1 .borda1 {
+    width: 80%;
+    height: 36vmax;
+    border: 10px solid #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff5f;
+}
+
+.testr {
+    border: 10px solid blue !important;
     position: absolute;
-    top: 100vh;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, transparent, black);
-    z-index: 1000;
+    z-index: -1;
 }
 
-.debaixo{
-    position: relative;
+.espaco1 .borda1 {
+    width: 90%;
+    height: 30vmax;
+    border: 10px solid red;
+}
+
+.espaco img,
+.espaco1 .carro {
+    width: 500px;
+    position: absolute;
+    right: 0px;
+    z-index: 50000;
+}
+
+.espaco1 .carro {
+    bottom: -40px;
+    right: 30%;
+}
+
+.debaixo {
+    position: absolute;
     width: 100%;
     height: 400px;
-    background-color: #fff;
+    background-color: blue;
     display: flex;
     flex-direction: column;
     padding: 100px;
-    z-index: 4;
+}
+
+
+@media only screen and (max-width: 1100px) {
+
+    nav,
+    .espaco {
+        display: none;
+    }
+
+
+    .nav1,
+    .espaco1 {
+        display: flex;
+    }
+
+    .espaco1 .carro {
+        bottom: 0px;
+        width: 300px;
+    }
 }
