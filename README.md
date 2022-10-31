@@ -1,1 +1,1 @@
-# meu-primeiro-resitorio Augusto César 
+Novo Projeto falando sobre carros, que foi uma das minhas primeiras ideias de site quando iniciei meu curso técnico de Desenvolvimento de Sistemas na Etec, em 2020.

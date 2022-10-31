@@ -1,0 +1,262 @@
+:root {
+    --clr: #386638;
+    --navHei: 7vmax;
+    --ff: 'Ubuntu';
+    --trans: all 1s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff);
+    transition: var(--trans);
+}
+
+
+body {
+    scroll-behavior: smooth;
+    background-color: var(--clr);
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100%;
+    height: var(--navHei);
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .logo {
+    width: 20%;
+    height: var(--navHei);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .logo h1 {
+    font-family: 'Ubuntu';
+    font-size: 3em;
+    font-weight: normal;
+    color: var(--clr);
+}
+
+nav .links {
+    width: 60%;
+    height: var(--navHei);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .links .aqui {
+    animation: aqui 1s infinite 1s alternate;
+}
+
+nav .links .aquii {
+    border-bottom: 2px solid var(--clr);
+    padding-bottom: 1px;
+}
+
+@keyframes aqui {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+nav .links ul {
+    height: var(--navHei);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .links ul li {
+    list-style: none;
+    margin: 0 15px;
+    height: var(--navHei);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .links ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: var(--clr);
+}
+
+nav .links ul li a:hover {
+    font-size: 1.5em;
+}
+
+nav .temazin {
+    width: 20%;
+    height: var(--navHei);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .temazin button {
+    width: 60%;
+    height: var(--navHei);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+
+nav .temazin button span {
+    color: var(--clr);
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.nav1 {
+    width: 100%;
+    height: var(--navHei);
+    background-color: #f5f5f5;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav1 .logo {
+    width: 70%;
+    height: var(--navHei);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav1 .logo h1 {
+    font-family: 'Ubuntu';
+    font-size: 3em;
+    font-weight: normal;
+    color: var(--clr);
+}
+
+.nav1 .menu {
+    width: 30%;
+    height: var(--navHei);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav1 .menu button {
+    width: 60%;
+    height: var(--navHei);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+
+.nav1 .menu button span {
+    color: var(--clr);
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.nav1 .escondido {
+    position: absolute;
+    top: 0;
+    right: -31%;
+    width: 30%;
+    height: 500px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: -1px 0px 10px black;
+}
+
+.nav1 .fechar {
+    width: 100%;
+    height: 8vmax;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    position: absolute;
+    top: 0px;
+}
+
+.nav1 .fechar span {
+    color: var(--clr);
+    font-size: 2em;
+}
+
+.nav1 .escondido ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav1 .escondido ul li {
+    list-style-type: none;
+}
+
+.nav1 .escondido ul li a {
+    color: var(--clr);
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width: 1100px) {
+    nav {
+        display: none;
+    }
+
+    .nav1 {
+        display: flex;
+    }
+}
+
+.espaco{
+    width: 100%;
+    height: 100vh;
+    background-color: #9900aa;
+    position: relative;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.espaco::before{
+    content: '';
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, transparent, black);
+    z-index: 1000;
+}
+
+.debaixo{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    z-index: 4;
+}
